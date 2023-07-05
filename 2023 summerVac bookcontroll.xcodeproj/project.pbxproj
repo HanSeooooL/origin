@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A423DD852A5561EF009941B8 /* UII.c in Sources */ = {isa = PBXBuildFile; fileRef = A423DD842A5561EF009941B8 /* UII.c */; };
 		A48B08A12A4C1A5000327E49 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A48B08A02A4C1A5000327E49 /* main.c */; };
+		A48B08A92A4C1B1800327E49 /* bookcontroll.c in Sources */ = {isa = PBXBuildFile; fileRef = A48B08A82A4C1B1800327E49 /* bookcontroll.c */; };
+		A48B08AB2A4C1B2C00327E49 /* fileInOut.c in Sources */ = {isa = PBXBuildFile; fileRef = A48B08AA2A4C1B2C00327E49 /* fileInOut.c */; };
+		A48B08AE2A4C28BA00327E49 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = A48B08AD2A4C28BA00327E49 /* test.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A423DD832A5561D0009941B8 /* windows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windows.h; sourceTree = "<group>"; };
+		A423DD842A5561EF009941B8 /* UII.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = UII.c; sourceTree = "<group>"; };
 		A48B089D2A4C1A4F00327E49 /* 2023 summerVac bookcontroll */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "2023 summerVac bookcontroll"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48B08A02A4C1A5000327E49 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		A48B08A72A4C1B1800327E49 /* bookcontroll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bookcontroll.h; sourceTree = "<group>"; };
+		A48B08A82A4C1B1800327E49 /* bookcontroll.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bookcontroll.c; sourceTree = "<group>"; };
+		A48B08AA2A4C1B2C00327E49 /* fileInOut.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fileInOut.c; sourceTree = "<group>"; };
+		A48B08AC2A4C28BA00327E49 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		A48B08AD2A4C28BA00327E49 /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +68,14 @@
 		A48B089F2A4C1A4F00327E49 /* 2023 summerVac bookcontroll */ = {
 			isa = PBXGroup;
 			children = (
+				A423DD832A5561D0009941B8 /* windows.h */,
 				A48B08A02A4C1A5000327E49 /* main.c */,
+				A48B08AA2A4C1B2C00327E49 /* fileInOut.c */,
+				A48B08A72A4C1B1800327E49 /* bookcontroll.h */,
+				A48B08A82A4C1B1800327E49 /* bookcontroll.c */,
+				A48B08AD2A4C28BA00327E49 /* test.c */,
+				A48B08AC2A4C28BA00327E49 /* test.h */,
+				A423DD842A5561EF009941B8 /* UII.c */,
 			);
 			path = "2023 summerVac bookcontroll";
 			sourceTree = "<group>";
@@ -119,7 +137,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48B08AB2A4C1B2C00327E49 /* fileInOut.c in Sources */,
+				A423DD852A5561EF009941B8 /* UII.c in Sources */,
 				A48B08A12A4C1A5000327E49 /* main.c in Sources */,
+				A48B08A92A4C1B1800327E49 /* bookcontroll.c in Sources */,
+				A48B08AE2A4C28BA00327E49 /* test.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

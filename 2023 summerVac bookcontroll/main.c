@@ -5,10 +5,20 @@
 //  Created by 한설 on 2023/06/28.
 //
 
+#include "bookcontroll.h"
+#include "test.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    //system("clear");
+    fflush(stdin);
+    title();
+    fflush(stdin);
+    //TC1_fileInOut();
+    
+    
+    
     return 0;
 }
