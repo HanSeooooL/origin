@@ -13,9 +13,7 @@
 
 int main(int argc, const char * argv[]) {
     //system("clear");
-    fflush(stdin);
     title();
-    fflush(stdin);
     //TC1_fileInOut();
     
     

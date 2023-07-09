@@ -8,6 +8,9 @@
 #ifndef bookcontroll_h
 #define bookcontroll_h
 
+#define UISTARTPOINTX 0 //UI출력 X축 시작지점
+#define UISTARTPOINTY 0 //UI출력 Y축 시작지점ㄴ
+
 //책 구조체 선언
 typedef struct _book {
     int prime;
@@ -16,18 +19,24 @@ typedef struct _book {
     char company[30];   //출판사 이름
     int rent;   //0이면 보유 1이면 대여
     char rentalname[30]; //빌려간 사람 이름
-    char rentaltime[8];    //빌려간 연월일
-    char retutime[8];      //반납예정 연월일
+    char rentaltime[20];    //빌려간 연월일
+    char retutime[20];      //반납예정 연월일
 } Book;
 
 
 //Algorithm
 void init_book(Book *a); //initialize book(have변수 뒤의 초기값)
+int checkhowdoyouDIDNTreturn(char *returnday);  //연체일 계산
+void rentthebook(Book *rentbook, char *rentperson, char *rentday, char *returnday);
+Book* search_book(char *keyword, int *how);
 
 
 //file In / OUT
 void addbook(char *name, Book newone);  //책 추가
-Book* fileLead(char *name, Book* unrented, int *n, int *rn);     //파일 불러오기
+void fileLead(char *name, int *n, int *rn);    //파일 불러오기
+Book** getbooklist(int rentedunrented, int n, int page, int *display); //페이지에 알맞은 책의 배열을 반환하는 함수.
+void savethefile(char *name);
+Book* gettheAllbookList(int *n);
 
 //UI
 void title(void);
